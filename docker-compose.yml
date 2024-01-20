@@ -3,6 +3,13 @@ version: "3"
 services:
   nodejs:
     # fill out the configuration here
+    nodejs: # The first service - a Node.js application
+    build: # Instructions to build the Node.js app's Docker image
+      context: . # Specifies the build context (current directory)
+      dockerfile: Dockerfile # Points to the Dockerfile
+    image: nodejs-app # Names the built image as 'nodejs-app'
+    container_name: nodejs # Sets the container's name to 'nodejs'
+    restart: unless-stopped # Configures the restart policy
     networks:
       - app-network
 
