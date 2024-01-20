@@ -3,7 +3,6 @@ version: "3"
 services:
   nodejs:
     # fill out the configuration here
-    nodejs: # The first service - a Node.js application
     build: # Instructions to build the Node.js app's Docker image
       context: . # Specifies the build context (current directory)
       dockerfile: Dockerfile # Points to the Dockerfile
@@ -35,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       # fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /Users/Katie/Desktop/web-template/web-template
       o: bind
 
 networks:
